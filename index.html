@@ -1,0 +1,105 @@
+﻿<html>
+<!-- Mirrored from x20xx.com/linearzone.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 06:30:04 GMT -->
+<head>  
+<!-- 1-2013 -->
+
+<title>: LinearZone</title>
+
+<style type="text/css">
+      html, body {  font-size:18px;
+      font-weight:bold;
+ font-family: Courier New, Lucida Console, monospace;
+ color:#ffffff;background:#000000; 
+ }
+*img[src$=".gif"], img[src$=".png"], img[src$=".jpg"] , img[src$=".bmp"] {
+                   image-rendering: -moz-crisp-edges;        
+                   image-rendering:   -o-crisp-edges;         
+                   image-rendering: -webkit-optimize-contrast;
+                   image-rendering: crisp-edges;
+                   -ms-interpolation-mode: nearest-neighbor;  
+                 }
+#ff
+{
+width:100px;
+height:100px;
+}
+</style>
+
+</head>
+<BODY >
+
+ <div id="ff" ><br><br>
+<script language="javascript">
+var delay=1000
+var curindex=0
+
+var randomimages=new Array()
+
+	randomimages[0]="pattern/burstlow.png"
+	randomimages[1]="pattern/Linear-ZonePlate.png"
+	randomimages[2]="pattern/calibration-wallpaper-10241.png"
+	randomimages[3]="pattern/gray4.bmp"
+	randomimages[4]="pattern/WVWallpaperTPhl.gif"
+	randomimages[5]="pattern/res.gif"
+	randomimages[6]="pattern/desktop.png"
+	randomimages[7]="pattern/123.png"
+	
+var preload=new Array()
+
+for (n=0;n<randomimages.length;n++)
+{
+	preload[n]=new Image()
+	preload[n].src=randomimages[n]
+}
+
+document.write('<img name="defaultimage" src="'+randomimages[Math.floor(Math.random()*(randomimages.length))]+'">')
+
+function rotateimage()
+{
+
+if (curindex==(tempindex=Math.floor(Math.random()*(randomimages.length)))){
+curindex=curindex==0? 1 : curindex-1
+}
+else
+curindex=tempindex
+
+	document.images.defaultimage.src=randomimages[curindex]
+}
+
+setInterval("rotateimage()",delay)
+
+</script>
+  </div>
+  <script type="text/javascript" language="javascript" charset="utf-8">
+function getTransformProperty(element) {
+    var properties = ['transform', 'msTransform', 'WebkitTransform', 'MozTransform' , 'OTransform'];
+    var p;
+    while (p = properties.shift()) {
+        if (typeof element.style[p] != 'undefined') {
+            return p;
+        }
+    }
+    
+    return false;
+}
+
+var div = document.getElementById('ff');
+var property = getTransformProperty(div);
+
+if (property) {
+
+
+   //setInterval(function () {div.style[property] = 'translate(' + //(1000*Math.random()-200) + 'px,' + (1000*Math.random()-200) + 'px)';}, 0);
+//	} else {
+//}
+
+    setInterval(function () {div.style[property] = 'scale(' + 8*Math.random()+ ',' + 8*Math.random()+ ')'+'translate(' + (600*Math.random()-600*Math.random()) + 'px,' + (600*Math.random()-600*Math.random()) + 'px)';}, 3);
+	} else {
+}
+
+</script>
+
+
+</body>
+<!-- Mirrored from x20xx.com/linearzone.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Nov 2022 06:30:11 GMT -->
+</html>
